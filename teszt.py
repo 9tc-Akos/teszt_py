@@ -1,3 +1,4 @@
+
 def osszegzes(l):
     sum=0
     for szam in l:
@@ -10,8 +11,16 @@ def filet_beolvas():
         for sor in fm:
             lista.append(int(sor.strip()))
     return lista
-    
+
+def megszamolas(l):
+    db=0
+    for szam in l:
+        if szam%2==0:
+            db+=1
+    return db
+  
 szamok=filet_beolvas()
 osszeg = osszegzes(szamok)
-print(osszeg)        
-
+parosszamok = megszamolas(szamok)
+print(osszeg)
+print(parosszamok)
